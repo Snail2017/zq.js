@@ -40,5 +40,5 @@ zq.countdown({
 
           使用方法
  zq.imgUpload({                //图片上传插件   支持点击放大
-		  obj:$(".imgUpload")
+	obj:$(".imgUpload")
 })
