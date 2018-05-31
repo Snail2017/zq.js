@@ -36,3 +36,9 @@ zq.countdown({
    time:120,                   //倒计时时间
    tip:获取手机验证码           //结束提示语     
 })
+
+
+          使用方法
+ zq.imgUpload({                //图片上传插件   支持点击放大
+		  obj:$(".imgUpload")
+})
