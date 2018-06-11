@@ -391,7 +391,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 				'<div class="btn-imgbox">' +
 				'<input type="file" accept="image/*" onchange="zq.preview(this) ">' +
 				'<div>' +
-				'<img src="images/upimg.png" alt="" />' +
+				'<img src="/asserts/js/zq/images/upimg.png" alt="" />' +
 				'<p>点击选择图片<br />(需小于500M)</p>' +
 				'</div></div></div>';
 			defaultSetting.obj.html(aa);
@@ -401,7 +401,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 			if(file.files && file.files[0]) {
 				var reader = new FileReader(),
 					imgLen = $(file).parents(".imgbox").find('.preview img').length;
+					console.log(reader)
 				reader.onload = function(evt) {
+					
 					for(var i = 0; i < imgLen; i++) {
 						var _files = $(file).parents(".imgbox").find('.preview img')[i].currentSrc;
 						if(evt.target.result == _files) {
@@ -410,7 +412,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 						}
 					}
 					$(file).parents(".imgbox").find('.preview').html($(file).parents(".imgbox").find('.preview').html() + '<div><img src="' + evt.target.result + '" /><span class="st_del" onclick="zq.imgDel(event)">×</span></div>');
-
+					file.value=''
 				}
 				reader.readAsDataURL(file.files[0]);
 			} else {
@@ -426,14 +428,14 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 			$('body').css('overflow', 'initial')
 		},
 		imgShow: function imgShow(e) {
-			console.log(e)
 			if(e.target.currentSrc != undefined) {
 				$(e.target).parents(".imgbox").parent('div').find(".bg").show();
 				$(e.target).parents(".imgbox").parent('div').find(".imgShow").css("display", 'table');
 				$(e.target).parents(".imgbox").parent('div').find(".imgShow span").html('<img  src=' + e.target.currentSrc + '  />');
 				$('body').css('overflow', 'hidden');
 			}
-		},
+		}, 
+
 	});
 	// 模块化和挂载
 	~ function() {

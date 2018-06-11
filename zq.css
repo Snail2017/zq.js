@@ -25,7 +25,7 @@
 /*图片上传*/
 .preview{width:  100%;overflow:hidden;}
 .preview>div>img{object-fit:  cover;width:100%;}
-.preview>div .st_del{position:absolute;font-size: 20px;top: 0;right: 0;color: #000;background:  #fff;width:  20px;height:  20px;line-height:  20px;text-align:  center;cursor:  default;}
+.preview>div .st_del{position:absolute;font-size: 20px;top: 0;right: 0;color: #000;background:  #fff;border: 1px solid #eee;width:  20px;height:  20px;line-height: 18px;text-align:  center;cursor:  default;}
 .preview>div{position:relative;width: 30%;height: 0.75rem;float: left;margin:  0 10px 10px 0;overflow:  hidden;line-height: 0.75rem;}
 .bg{top: 0;bottom: 0;left: 0;right: 0;position:  fixed;background: #000;opacity:  0.8;z-index: 3;display:  none;}
 .btn-imgbox{position:relative;width: 100px;height: 100px;border: 1px dashed #bfbaba;text-align:  center;}
