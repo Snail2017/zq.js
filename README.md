@@ -1,16 +1,14 @@
 # 将工作中比较常用的组件整合成插件。
 
 1. zq.bindKeyEvent() 监听input金额输入，只能输入两位小数
-
- 使用方法
+> 使用方法
 ```
   $(document).ready(function(){
        zq.bindKeyEvent($(".aa"),"正则")；
     });
 ```
 2. zq.tipsbox()   //鼠标移上去显示提示
-
-使用方法
+> 使用方法
 ```
     zq.tipsbox({
          obj: $(".st_tipsbox"),   //选择器
